@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Empleado Nuevo</title>
+  <title>Orador Nuevo</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,7 +16,7 @@
   <main>
     <div class="container" id="app">
       <form style="background-color: aliceblue; margin: 10px auto; width: 400px; padding: 20px;">
-        <h1>Alta de Empleado</h1>
+        <h1>Alta de Orador</h1>
         <div class="mb-3">
           <label for="nombre">Nombre</label>
           <input type="text" name="nombre" id="nombre" v-model="nombre">
@@ -26,24 +26,16 @@
           <input type="text" name="apellido" id="apellido" v-model="apellido">
         </div>
         <div class="mb-3">
-          <label for="dni">DNI</label>
-          <input type="text" name="dni" id="dni" v-model="dni">
+          <label for="email">email</label>
+          <input type="text" name="email" id="email" v-model="email">
         </div>
         <div class="mb-3">
-          <label for="num_empleado">Número de Empleado</label>
-          <input type="text" name="num_empleado" id="num_empleado" v-model="num_empleado">
+          <label for="tema">Tema</label>
+          <input type="text" name="tema" id="tema" v-model="tema">
         </div>
         <div class="mb-3">
-          <label for="correo">Correo</label>
-          <input type="email" name="correo" id="correo" v-model="correo">
-        </div>
-        <div class="mb-3">
-          <label for="cargo">Cargo</label>
-          <input type="text" name="cargo" id="cargo" v-model="cargo">
-        </div>
-        <div class="mb-3">
-          <label for="fecha_nacimiento">Fecha de Nacimiento</label>
-          <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" v-model="fecha_nacimiento">
+          <label for="fecha_alta">Fecha_alta</label>
+          <input type="date" name="fecha_alta" id="fecha_alta" v-model="fecha_alta">
         </div>
         <button type="button" class="btn btn-success" v-on:click="grabar()">Grabar</button>
       </form>
@@ -60,6 +52,6 @@
   <script src="../static/main.js"></script>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <!-- Agrega el script de empleados.js o el que estés utilizando -->
-  <script src="../static/empleados.js"></script>
+  <script src="../static/oradores.js"></script>
 </body>
 </html>

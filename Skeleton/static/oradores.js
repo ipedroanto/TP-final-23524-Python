@@ -3,18 +3,16 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            empleados: [],
-            url: 'http://127.0.0.1:5000/empleados',
+            oradores: [],
+            url: 'http://127.0.0.1:5000/oradores',
             error: false,
             cargando: true,
             id: 0,
             nombre: '',
             apellido: '',
-            dni: '',
-            correo: '',
-            cargo: '',
-            fecha_nacimiento: '',
-            num_empleado: '',
+            email: '',
+            tema: '',
+            fecha_alta: '',
         };
     },
     methods: {
@@ -22,7 +20,7 @@ createApp({
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
-                    this.empleados = data;
+                    this.oradores = data;
                     this.cargando = false;
                 })
                 .catch(err => {
@@ -30,8 +28,8 @@ createApp({
                     this.error = true;
                 });
         },
-        eliminar(empleado) {
-            const url = this.url + '/' + empleado;
+        eliminar(orador) {
+            const url = this.url + '/' + orador;
             var options = {
                 method: 'DELETE',
             };
@@ -42,24 +40,22 @@ createApp({
                 })
         },
         grabar(){
-            let empleado = {
+            let orador = {
                 nombre: this.nombre,
                 apellido : this.apellido,
-                dni: this.dni,
-                num_empleado : this.num_empleado,
-                correo: this.correo,
-                cargo: this.cargo,
-                fecha_nacimiento: this.fecha_nacimiento,
+                email: this.email,
+                tema : this.tema,
+                fecha_alta: this.fecha_alta,
             };
             var options = {
                 method: 'POST',
-                body: JSON.stringify(empleado),
+                body: JSON.stringify(orador),
                 headers: { 'Content-Type': 'application/json' },
                 redirect: 'follow'
             };
             fetch(this.url, options)
             .then(function () {
-                alert('Se registro el empleado');
+                alert('Se registro el orador');
                 window.location.href = './index.html';
             })
             .catch(err => {

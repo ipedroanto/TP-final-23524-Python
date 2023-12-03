@@ -10,12 +10,10 @@ createApp({
             id: 0,
             nombre: "",
             apellido: "",
-            dni: "",
-            num_empleado: "",
-            correo: "",
-            cargo: "",
-            fecha_nacimiento: "",
-            url: 'http://localhost:5000/empleados/' + id,
+            email: "",
+            tema: "",
+            fecha_alta: "",
+            url: 'http://localhost:5000/oradores/' + id,
         };
     },
     methods: {
@@ -27,11 +25,9 @@ createApp({
                     this.id = data.id;
                     this.nombre = data.nombre;
                     this.apellido = data.apellido;
-                    this.dni = data.dni;
-                    this.num_empleado = data.num_empleado;
-                    this.correo = data.correo;
-                    this.cargo = data.cargo;
-                    this.fecha_nacimiento = data.fecha_nacimiento;
+                    this.email = data.email;
+                    this.tema = data.tema;
+                    this.fecha_alta = data.fecha_alta;
                 })
                 .catch(err => {
                     console.error(err);
@@ -39,17 +35,15 @@ createApp({
                 });
         },
         modificar() {
-            let empleado = {
+            let orador = {
                 nombre: this.nombre,
                 apellido: this.apellido,
-                dni: this.dni,
-                num_empleado: this.num_empleado,
-                correo: this.correo,
-                cargo: this.cargo,
-                fecha_nacimiento: this.fecha_nacimiento,
+                email: this.email,
+                tema: this.tema,
+                fecha_alta: this.fecha_alta,
             };
             var options = {
-                body: JSON.stringify(empleado),
+                body: JSON.stringify(orador),
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 redirect: 'follow'

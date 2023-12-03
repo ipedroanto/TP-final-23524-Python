@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Editar Empleado</title>
+    <title>Editar Orador</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS v5.2.1 -->
@@ -15,7 +15,7 @@
     <main>
         <div class="container" id="app">
             <form style="background-color: aliceblue;margin:10px auto ; width: 400px; padding: 20px;">
-                <h2>Editar Empleado</h2>
+                <h2>Editar Orador</h2>
                 <div class="mb-3">
                     <label for="id">Id</label>
                     <input type="number" name="id" id="id" disabled v-model="id">
@@ -29,24 +29,16 @@
                     <input type="text" name="apellido" id="apellido" v-model="apellido">
                 </div>
                 <div class="mb-3">
-                    <label for="dni">DNI</label>
-                    <input type="text" name="dni" id="dni" v-model="dni">
+                    <label for="email">email</label>
+                    <input type="text" name="email" id="email" v-model="email">
                 </div>
                 <div class="mb-3">
-                    <label for="num_empleado">Número de Empleado</label>
-                    <input type="text" name="num_empleado" id="num_empleado" v-model="num_empleado">
+                    <label for="tema">Tema</label>
+                    <input type="text" name="tema" id="tema" v-model="tema">
                 </div>
                 <div class="mb-3">
-                    <label for="correo">Correo</label>
-                    <input type="text" name="correo" id="correo" v-model="correo">
-                </div>
-                <div class="mb-3">
-                    <label for="cargo">Cargo</label>
-                    <input type="text" name="cargo" id="cargo" v-model="cargo">
-                </div>
-                <div class="mb-3">
-                    <label for="fecha_nacimiento">Fecha de Nacimiento</label>
-                    <input type="text" name="fecha_nacimiento" id="fecha_nacimiento" v-model="fecha_nacimiento">
+                    <label for="fecha_alta">Fecha_alta</label>
+                    <input type="text" name="fecha_alta" id="fecha_alta" v-model="fecha_alta">
                 </div>
                 <button type="button" class="btn btn-success" v-on:click="modificar()">Grabar</button>
             </form>
@@ -62,6 +54,6 @@
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
     <script src="../static/main.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="../static/empleado_editar.js"></script>
+    <script src="../static/orador_editar.js"></script>
 </body>
 </html>
